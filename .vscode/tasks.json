@@ -1,0 +1,24 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "watch-sass",
+            "type": "gulp",
+            "task": "watch-sass",
+            "problemMatcher": [],
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn":["compile-sass"]
+        },
+        {
+            "label": "compile-sass",
+            "type": "gulp",
+            "task": "compile-sass",
+            "problemMatcher": []
+        }
+    ]
+}

@@ -1,0 +1,52 @@
+$font-family-sans-serif: 'Roboto', sans-serif;
+$font-family-monospace: 'Roboto Mono', monospace;
+$body-bg: #292a2d;
+$body-color: #a9a9b3;
+$navbar-color: #a9a9b3;
+$navbar-bg: #252627;
+
+$navbar-dark-color:                 rgba($navbar-color, .5) !default;
+$navbar-dark-hover-color:           rgba($navbar-color, .75) !default;
+$navbar-dark-active-color:          $navbar-color !default;
+$navbar-dark-disabled-color:        rgba($navbar-color, .25) !default;
+$navbar-dark-toggler-border-color:  rgba($navbar-color, .1) !default;
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+.navbar {
+    background: $navbar-bg;
+}
+
+.content {
+    margin-top: 4rem;
+}
+
+.logo__cursor {
+    display: inline-block;
+    // width: 10px;
+    // height: 1rem;
+    color: #FEDBA9;
+    margin-left: 5px;
+    // border-radius: 1px;
+    animation: cursor 1s infinite;
+}
+
+@media(prefers-reduced-motion:reduce) {
+    .logo__cursor {
+        animation: none
+    }
+}
+
+@keyframes cursor {
+    0% {
+        opacity: 0
+    }
+
+    50% {
+        opacity: 1
+    }
+
+    100% {
+        opacity: 0
+    }
+}
