@@ -21,7 +21,12 @@ $navbar-dark-toggler-border-color:  rgba($navbar-color, .1) !default;
     margin-top: 4rem;
 }
 
-.logo__cursor {
+.command_input {
+    display: inline-block;
+    margin-left: 5px;
+    color: #FEDBA9;
+}
+.command_cursor {
     display: inline-block;
     // width: 10px;
     // height: 1rem;
@@ -32,7 +37,7 @@ $navbar-dark-toggler-border-color:  rgba($navbar-color, .1) !default;
 }
 
 @media(prefers-reduced-motion:reduce) {
-    .logo__cursor {
+    .command_cursor {
         animation: none
     }
 }

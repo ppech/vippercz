@@ -21,7 +21,10 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a href="/" class="navbar-brand text-monospace" href="#">PS C:\ViPPeR\web&gt;<span class="logo__cursor">_</span></a>
+            <a href="/" class="navbar-brand text-monospace" href="#">
+                <span>PS C:\ViPPeR\web&gt;</span><span id="commandInput" class="command_input"></span><span
+                    class="command_cursor">_</span>
+            </a>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
@@ -36,10 +39,12 @@
             <div class="text-monospace py-5">
                 <h1>Pavel ViPPeR Pech</h1>
                 <h4>impossible immediately, miracles within three days</h2>
-                <div class="mt-5">
-                    <a class="text-reset" href="https://www.linkedin.com/in/pavelpech/"><i class="fab fa-fw fa-2x fa-linkedin"></i></a>
-                    <a class="text-reset" href="https://github.com/ppech"><i class="fab fa-fw fa-2x fa-github-square"></i></a>
-                </div>
+                    <div class="mt-5">
+                        <a class="text-reset" href="https://www.linkedin.com/in/pavelpech/"><i
+                                class="fab fa-fw fa-2x fa-linkedin"></i></a>
+                        <a class="text-reset" href="https://github.com/ppech"><i
+                                class="fab fa-fw fa-2x fa-github-square"></i></a>
+                    </div>
             </div>
         </div>
         <div class="footer flex-grow-0 p-4 text-monospace small">
@@ -55,6 +60,37 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+
+            var input = document.getElementById('commandInput');
+
+            document.body.addEventListener("keypress", function (event) {
+                if (document.activeElement == null || document.activeElement == document.body) {
+                    var x = event.charCode || event.keyCode;
+                    if (x >= 64 && x <= 90 || x >= 97 && x <= 122 || x >= 48 && x <= 57) { // A-Za-z0-9
+
+                        input.textContent += String.fromCharCode(x);
+                    }
+                    else if (x == 32) { // space
+                        input.textContent += " ";
+                    }
+                }
+            });
+
+            document.body.addEventListener("keydown", function (event) {
+                if (document.activeElement == null || document.activeElement == document.body) {
+                    var x = event.charCode || event.keyCode;
+                    if (x == 8) { // backspace
+                        if (input.textContent.length > 0)
+                            input.textContent = input.textContent.substr(0, input.textContent.length - 1);
+                    }
+                    else if(x == 13) { // enter
+                    }
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
