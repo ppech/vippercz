@@ -19,6 +19,40 @@
             "type": "gulp",
             "task": "compile-sass",
             "problemMatcher": []
+        },
+        {
+            "label": "watch-js",
+            "type": "gulp",
+            "task": "watch-js",
+            "problemMatcher": [],
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn":["compile-js"]
+        },
+        {
+            "label": "compile-js",
+            "type": "gulp",
+            "task": "compile-js",
+            "problemMatcher": []
+        },
+        {
+            "label": "watch-html",
+            "type": "gulp",
+            "task": "watch-html",
+            "problemMatcher": [],
+            "isBackground": true,
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "dependsOn":["compile-html"]
+        },
+        {
+            "label": "compile-html",
+            "type": "gulp",
+            "task": "compile-html",
+            "problemMatcher": []
         }
     ]
 }

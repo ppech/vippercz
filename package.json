@@ -16,6 +16,7 @@
     "jquery": "3.4.1",
     "popper.js": "1.15.0",
     "@fortawesome/fontawesome-free": "5.8.2",
-    "gulp-debug": "4.0.0"
+    "gulp-debug": "4.0.0",
+    "gulp-nunjucks-render": "2.2.3"
   }
 }
